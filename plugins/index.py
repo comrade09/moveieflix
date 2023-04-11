@@ -91,9 +91,9 @@ async def send_for_index(bot, message):
             filename = file.file_name
             filesize = humanize.naturalsize(file.file_size) 
             buttons = [
-                [ InlineKeyboardButton("📝✧ S𝚝ar𝚝 re𝚗aᗰi𝚗g ✧📝", callback_data="rename") ],
-                [ InlineKeyboardButton('📇✧✧  S𝚝ar𝚝 iŋdᗴＸi𝚗g  ✧✧📇',callback_data=f'index#accept#{chat_id}#{last_msg_id}#{message.from_user.id}')],
-                [ InlineKeyboardButton('⨳  C L Ф S Ξ  ⨳', callback_data='cancel'),]
+                [ InlineKeyboardButton("📝 Rename File 📝", callback_data="rename") ],
+                [ InlineKeyboardButton('📇 Index 📇',callback_data=f'index#accept#{chat_id}#{last_msg_id}#{message.from_user.id}')],
+                [ InlineKeyboardButton('Close ', callback_data='cancel'),]
             ]
             reply_markup = InlineKeyboardMarkup(buttons)
             return await message.reply(
@@ -162,7 +162,7 @@ async def send_for_index(bot, message):
             filename = file.file_name
             filesize = humanize.naturalsize(file.file_size) 
             k = await message.reply(
-                                f"\n⨳ *•.¸♡ LΛＺ𝐲 ＭⓄｄ𝓔 ♡¸.•* ⨳\n\n🤩 Do you know LazyPrincess can do a lot of things at a time...\nWould you like to try some of it's amazing features... \n\n🪬Chat ID/ Username: <code>{chat_id}</code>\nℹ️Last Message ID: <code>{last_msg_id}</code> \n\n🎞**File Name** :- `{filename}`\n\n⚙️**File Size** :- `{filesize}`",
+                                f"\n⨳ *•.¸♡ LΛＺ𝐲 ＭⓄｄ𝓔 ♡¸.•* ⨳\n\n🤩 Do you know can do a lot of things at a time...\nWould you like to try some of it's amazing features... \n\n🪬Chat ID/ Username: <code>{chat_id}</code>\nℹ️Last Message ID: <code>{last_msg_id}</code> \n\n🎞**File Name** :- `{filename}`\n\n⚙️**File Size** :- `{filesize}`",
                                 reply_to_message_id=message.id,
                                 reply_markup=reply_markup)
             await asyncio.sleep(600)
